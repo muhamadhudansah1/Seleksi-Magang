@@ -1,0 +1,45 @@
+<main>
+    <div class="container">
+      <header>
+        <h1>Dashboard Header</h1>
+        <ul>
+          <div class="senter">
+            <button class="dashboard-button" (click)="goToDashboard()">Go to Dashboard</button>
+          </div>
+        </ul>
+      </header>
+  
+      <div class="main-content">
+        <section class="content">
+            <table>
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Name</th>
+                    <th>GroupId</th>
+                    <th>Avatar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let user of users">
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.groupId }}</td>
+                    <td><img [src]="user.avatar" alt="{{ user.name }}" width="50" height="50"></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+        </section>
+      </div>
+  
+      <footer>
+        <p>Dashboard Footer</p>
+      </footer>
+    </div>
+  </main>
+  
